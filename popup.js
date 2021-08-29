@@ -1,8 +1,8 @@
 function displayListItem(title, url, date) {
     var ul = document.getElementById("watch_list");
-    var li_str = `<a href='{url}'>{title} - {date}</a> <button class='{title}' id="replace-btn">Replace</button> <button class='{title}' id="remove-btn">Remove</button>`
+    var li_str = `<a href='{url}'>{title} - {date}</a> <button class='{title}' id="replace-btn">R</button> <button class='{title}' id="remove-btn">X</button>`
     li_str = li_str.replaceAll('{url}',url).replaceAll('{title}',title).replaceAll('{date}',date)
-    var li = document.createElement("li");
+    var li = document.createElement("div");
     li.setAttribute('id',title);
     li.innerHTML = li_str;
     ul.appendChild(li);
